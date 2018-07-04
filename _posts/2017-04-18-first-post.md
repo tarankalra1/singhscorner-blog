@@ -1,7 +1,6 @@
 ---
 layout: post
-title: A Great First Post
+title: Basic modeling differences between aerodynamics and hydrodynamics
 ---
 
-This is it!
-What a wonderful post!
+

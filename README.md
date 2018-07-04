@@ -1,3 +1,3 @@
-# homepage2
+# about 
 
 blog 

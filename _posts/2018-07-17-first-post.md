@@ -3,9 +3,7 @@ layout: post
 title: Basic modeling differences between aerodynamics and hydrodynamics
 ---
 
-### Aerodynamic modelling 
-
-AEROSPACE vs OCEANOGRAPHY MODELING
+### AEROSPACE vs OCEANOGRAPHY MODELING
 
 These notes are made from my experience of working in aerospace and oceanographic models.
 The notes are highly generalized and present limited examples.

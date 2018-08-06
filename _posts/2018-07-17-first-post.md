@@ -54,6 +54,29 @@ gives a minimum grid size required on the blade to Note that this is the vertica
 
 1.3) The aspect ratio of grid cells is usually 100:1 (Horizontal to vertical). The horizontal cells are very coarse compared to vertical grid cells for coastal applications. The area that we are trying to model horizontally is of the order of kilometers while the depths are ranging from 1m to 50m. Beyond 200m, deep ocean dynamics prevail and one cannot rely on the setups as described here. 
 
-3. 
 
+
+#### 3. Advection schemes (Space marching)
+##### a) Aerospace:
+- Higher order schemes such as a fifth order WENO scheme is not uncommon. Resolving vortices with
+higher resolution is one of the significant issues because they cause high amount of drag in both fixed wing and rotating flows.
+
+##### b) Ocean:
+ Higher order schemes are usually not used as the grids are coarser. MPDATA is a common scheme that is used in geosciences. It is from Lax-wendroff family of schemes. It ensures that the tracer quantities that are convected in ocean models do not go negative (to ensure physical solutions).
+
+#### 4. Time Marching
+##### a) Aerospace:
+Time marching is usually done implicitly. Loss of accuracy in implicit methods is compensated by higher grid resolution. The advantage of having implicit time marching that one can take bigger time steps (CFL condition is relaxed). For unsteady simulations Newton sub-iterations are used to march faster in time by using a dtpsuedo (psuedo time step)
+to have steadiness within an unsteady step.
+
+##### b) Ocean:
+Explicit time marching is used in horizontal directions. 
+Mode splitting- Time steps are split up in 2 D and 3 D modes
+2D resolves the depth averaged system (barotropic) i.e. density does not change with depth
+3D resolves the baroclinic system i.e. density is depth dependent
+these 2 modes are coupled using a ....
+
+
+In general the concern in aerospace applications is to design rotors, wings etc. and the need of the hour is to resolve small scale physics, however, in coastal science applications the need is to predict storms, erosion patterns etc. for regional systems such as bays, islands and the need of the hour is to account for different physical phenomenon. In the latter, the local bathymetry, wind pattern, even seagrass can change the dynamics of a system. 
+To put it simply the challenges are entirely different. 
 <img src="rect_tipvortex.png" width="200" height="200" />

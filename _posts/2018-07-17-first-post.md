@@ -20,17 +20,17 @@ ROMS, wave model SWAN and atmosphere model WRF. It is being developed and mainta
 
 Now we will proceed with the differences in the model equations and setup methods. 
 1. CFD Assumptions in the models
-...a) Aerospace:
-...5.1) Usually the aerospace applications can have either a compressible or incompressible solver.
+..*a) Aerospace:
+..*5.1) Usually the aerospace applications can have either a compressible or incompressible solver.
 Any application with Mach number > 0.3 employs a compressible solver (change in density is significant).
 You end up solving one more equation for density variation and additional
 terms in NS equations for momentum and energy.
 
 <img src="rect_tipvortex.png" width="200" height="200" />
 
-...5.2) Boussinesq approximation in aerospace implies
+..*5.2) Boussinesq approximation in aerospace implies
 
-...b) Ocean:
-...5.1 The ocean model ROMS is a hydrostatic model. It cannot resolve the fine structures.
-...5.2
+..*b) Ocean:
+..*5.1 The ocean model ROMS is a hydrostatic model. It cannot resolve the fine structures.
+..*5.2
 

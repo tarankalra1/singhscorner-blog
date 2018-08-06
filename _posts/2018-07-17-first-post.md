@@ -90,11 +90,11 @@ Nesting is done to resolve areas of importance in a flow field by having multipl
 
 #### 5. Domain decomposition for parallel processing 
 ##### a) Aerospace: 
-In overset grids/nested grids for aerospace the embedded grid and the background grid both do calculations at the same type. So, one can do the domain decomposition over all grids. so if you have 2 grids. You can divide them into "x" number of processors. The exchange of information happens at each time step at the boundaries from child to parent.
+- In overset grids/nested grids for aerospace the embedded grid and the background grid both do calculations at the same type. So, one can do the domain decomposition over all grids. so if you have 2 grids. You can divide them into "x" number of processors. The exchange of information happens at each time step at the boundaries from child to parent.
 So effectively you can use more computational power as you are domain decomposing all grids.
 
 ##### b) Ocean: 
-In atmosphere/ocean models the domain decomposition happens only at a particular grid first so first the parent would run, then the child would run over the same processors. this means that when parent is running, child has to wait and vice versa. Then the information from child to parent is sent back. That completes one cycle of time stepping. 
+- In atmosphere/ocean models the domain decomposition happens only at a particular grid first so first the parent would run, then the child would run over the same processors. this means that when parent is running, child has to wait and vice versa. Then the information from child to parent is sent back. That completes one cycle of time stepping. 
 The reason for this is that in these models, not only solve for velocity and pressure evolve but also tracers evolve. For child grid usually a smaller time step is required for CFL criterion (Most models are explicit in time marching
 except for vertical direction). So the child is slowly evolving in time. If one hypothetically run all the grids in parallel that would mean that child and parent are both evolving differently.
 
@@ -107,12 +107,12 @@ except for vertical direction). So the child is slowly evolving in time. If one 
 
 #### 7. Boundary layer (BL) 
 ##### a) Aerospace: 
-As I mentioned before, the resolution of boundary layer is required to resolve vortex structures. They can be a big source of drag. 
+- As I mentioned before, the resolution of boundary layer is required to resolve vortex structures. They can be a big source of drag. 
 
 ##### b) Ocean: 
-Rarely in coastal engineering, the goal is to resolve the BL. So a logarithmic profile, linear or quadratic profile fit can be done to satisfy the no-slip condition. 
+- Rarely in coastal engineering, the goal is to resolve the BL. So a logarithmic profile, linear or quadratic profile fit can be done to satisfy the no-slip condition. 
 
-
+## Some final thoughts: 
 In general, the concern in aerospace applications is to design rotors, wings etc. and the need of the hour is to resolve small scale physics. On the other hand, in coastal science applications the need is to predict storms, erosion patterns etc. for regional systems such as bays, islands and the need of the hour is to account for different physical phenomenon. In the latter, the local bathymetry, wind pattern, even seagrass can change the dynamics of a system. 
 
 To put it simply, the challenges are entirely different. 

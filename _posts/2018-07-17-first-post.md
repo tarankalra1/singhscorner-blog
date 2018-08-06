@@ -77,7 +77,7 @@ Mode splitting- Time steps are split up in 2 D and 3 D modes
 these 2 modes are coupled using a ....
 
 
-#### 4. Overset meshes/nesting
+#### 5. Overset meshes/nesting
 Nesting is done to resolve areas of importance in a flow field by having multiple meshes in the same region and telescoping from coarser to finer resolution. 
 
 ##### a) Aerospace: 
@@ -88,7 +88,7 @@ Nesting is done to resolve areas of importance in a flow field by having multipl
 
 
 
-#### 5. Domain decomposition for parallel processing 
+#### 6. Domain decomposition for parallel processing 
 ##### a) Aerospace: 
 - In overset grids/nested grids for aerospace the embedded grid and the background grid both do calculations at the same type. So, one can do the domain decomposition over all grids. so if you have 2 grids. You can divide them into "x" number of processors. The exchange of information happens at each time step at the boundaries from child to parent.
 So effectively you can use more computational power as you are domain decomposing all grids.
@@ -98,14 +98,14 @@ So effectively you can use more computational power as you are domain decomposin
 The reason for this is that in these models, not only solve for velocity and pressure evolve but also tracers evolve. For child grid usually a smaller time step is required for CFL criterion (Most models are explicit in time marching
 except for vertical direction). So the child is slowly evolving in time. If one hypothetically run all the grids in parallel that would mean that child and parent are both evolving differently.
 
-#### 6. Turbulence Modeling
+#### 7. Turbulence Modeling
 ##### a) Aerospace: 
 - Usually RANS models utilize Spalart Allamaras model in its separate variant forms is very common for external flows. It is designed for thin shear layers and does not work for massively seperated airflow.
 
 ##### b) Ocean: 
 - Usual RANS models only solve for turbulence in vertical direction. COAWST model has several 2-equation turbulence models for the vertical including k-epsilon, k-omega model. Remember the horizontal dimensions are highly diffusive and can use simple algebraic model. The grids being highly coarse in horizontal direction in usual applications of ocean sciences.
 
-#### 7. Boundary layer (BL) 
+#### 8. Boundary layer (BL) 
 ##### a) Aerospace: 
 - As I mentioned before, the resolution of boundary layer is required to resolve vortex structures. They can be a big source of drag. 
 

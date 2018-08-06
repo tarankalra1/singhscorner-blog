@@ -38,4 +38,15 @@ terms in NS equations for momentum and energy.
 
 1.2)
 
+#### 2. Typical grid sizes
+
+##### a) Aerospace:
+1.1)
+
+##### b) Ocean:
+
+1.1) Reynolds number determines the extent of mesh resolution in aerospace applications
+to resolve boundary layers. However, in oceanography for coastal engineering applications, Reynolds number is not
+a part of the discourse.
+
 <img src="rect_tipvortex.png" width="200" height="200" />

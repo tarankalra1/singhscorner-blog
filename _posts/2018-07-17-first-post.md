@@ -44,7 +44,7 @@ Now we will proceed with the differences in the model equations and setup method
 - Reynolds number (Re) determines the extent of mesh resolution in aerospace applications because it is desired that one resolves the boundary layer. A blade operating at a subscale rotor of 1m radius and 0.045 m chord operating at a Mach number of 0.24 and Re=250,000. To resolve the boundary layer using NASA's viscous wall spacing calculator (y+=1)
 gives a minimum grid size required on the blade to Note that this is dimension along the chordwise direction for the rotor blade (Link to viscous calculator - https://geolab.larc.nasa.gov/APPS/YPlus/). Look at the C-O type blade mesh. 
 
-<img src="blade_3.png" width="400" height="300" />
+![rotor blade with C-O mesh](blade_3.png)
 
 - The aspect ratio of grid cells is usually 1:3 (Horizontal to vertical grid cells)
 

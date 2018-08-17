@@ -8,3 +8,7 @@ github_username:  tarankalra-usgs
 # Build settings
 markdown: kramdown
 theme: minima
+
+navbar-links:
+  Home : ""
+  About Me: "aboutme"

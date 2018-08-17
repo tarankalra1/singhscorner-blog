@@ -8,5 +8,6 @@ About Me: "aboutme"
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: jekyll-theme-primer
+
 

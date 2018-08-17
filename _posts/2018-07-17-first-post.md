@@ -14,9 +14,9 @@ applications. Another example of a popular choice for rotorcraft simulations is 
 ##### b) Ocean model:
 The code that I currently develop and use is called COAWST. COAWST itself is a coupled model that consists of an ocean model
 ROMS, wave model SWAN and atmosphere model WRF. It is being developed and maintained at US Geological Survey's Woods Hole Marine Center. Within the ocean model, it has a sediment transport model, vegetation model and biogeochemistry models.
-The main purpose of COAWST development is to solve for coastal science problems. For instance how does a storm cause the sediment to move at a coastal location. 
+The main purpose of COAWST development is to solve for coastal science problems. For instance one would application would be to study how a storm causes the sediment transport. 
 
-The similarities in both models include that they solve for N-S equations using curvilinear structured grids. These notes explain how some terminology refers to the same things or sometimes to different things in the two different worlds of modeling.
+The similarities in both models (aerodynamics and ocean model) include that they solve for N-S equations using curvilinear structured grids. These notes explain how some terminology refers to the same things or sometimes to different things in the two different worlds of modeling.
 
 Now we will proceed with the differences in the model equations and setup methods. 
 
@@ -26,11 +26,13 @@ Now we will proceed with the differences in the model equations and setup method
 
 - Usually the aerospace applications can have either a compressible or incompressible solver. Any application with Mach number > 0.3 employs a compressible solver (change in density is significant). You end up solving one more equation for density variation and additional terms in NS equations for momentum and energy.
 
-- Boussinesq approximation generally refers to the eddy viscosity hypothesis in RANS models. It basically means that the Reynolds stress tensor can be directly related to the mean strain rate. It allows 
+- Boussinesq approximation generally refers to the eddy viscosity hypothesis in RANS models. It basically means that the Reynolds stress tensor can be directly related to the mean strain rate. For the models it is useful to then assume that all the turbulence is parameterized into an eddy viscosity coefficient. Eventually the goal of the turbulence models is to solve for this eddy viscosity coefficient. 
 
 ##### b) Ocean:
 
-- The ocean model ROMS is a hydrostatic model. It cannot resolve the fine structures. Look at the difference between a hydrostatic and non-hydrostatic models. Hydrostatic models follow Boussinesq approximation that has a completely different meaning that the aerospace modeling one. It refers to the assumption that the density variation in vertical is negligible. It is true for coastal engineering applications. 
+- The ocean model ROMS is a hydrostatic model. It cannot resolve the fine structures.  Hydrostatic models only consider pressure changes with depth and what it means from a practical standpoint is that if the horizontal scales in the model are much larger than the vertical scales, one does not have to resolve the non-hydrostatic flow. So a hydrostatic model would not resolve solve scale features in the horizontal direction which is okay for coastal engineering applications. Take a look at the difference of a classical problem of lock exchange (Similar to the classical shock tube problem in aerospace). Two different density fluids are mixed. The hydrostatic model is showing a front but non-hydrostatic model also captures the vortex features (horizontal features). This image is from the volume of oceanography published by Fringer et al. 2006. 
+![hydrostatic_vs_nonhydrostatic model](https://user-images.githubusercontent.com/10886837/44286198-38391980-a236-11e8-8248-0ff4d0875465.png)
+
 
 - In addition to the NS-equations, one has to solve for tracer equations using the material transport equation. Tracers are quantities that advect and diffuse in the system. Because water density is dependent on salinity and temperature, the tracer equations for these two are solved separately. 
 
@@ -46,7 +48,6 @@ gives a minimum grid size required on the blade to Note that this is dimension a
 
 ![rotor blade with C-O mesh](https://user-images.githubusercontent.com/10886837/44048498-81ce502c-9eff-11e8-9084-bd358fb8d79b.png)
 
-- The aspect ratio of grid cells is usually 1:3 (Horizontal to vertical grid cells)
 
 ##### b) Ocean:
 - Typical grid types for coastal applications use Arakawa C-grids. Because the water level is varying, one has to resolve that and there is a method known as sigma coordinate system that allows for vertical layers to change dynamically. There are various flavors of sigma coordinate systems depending on what one is trying to resolve- free water surface, boundary layer at the bottom of the ocean etc.  
@@ -59,6 +60,7 @@ gives a minimum grid size required on the blade to Note that this is dimension a
 ##### a) Aerospace:
 - Higher order schemes such as a fifth order WENO scheme is not uncommon. Resolving vortices with
 higher resolution is one of the significant issues because they cause high amount of drag in both fixed wing and rotating flows.
+
 
 ##### b) Ocean:
 - Higher order schemes are usually not used as the grids are coarser. MPDATA is a common scheme that is used in geosciences. It is from Lax-wendroff family of schemes. It ensures that the tracer quantities that are convected in ocean models do not go negative (to ensure physical solutions). The vertical dimension is treated differently than horizontal because it can be resolved to a finer degree. It can employ high order schemes and use implicit time marching. 
@@ -73,7 +75,6 @@ to have steadiness within an unsteady step.
 Mode splitting- Time steps are split up in 2 D and 3 D modes
 2D resolves the depth averaged system (barotropic) i.e. density does not change with depth
 3D resolves the baroclinic system i.e. density is depth dependent
-these 2 modes are coupled using a ....
 
 
 #### 5. Overset meshes/nesting
@@ -107,6 +108,8 @@ except for vertical direction). So the child is slowly evolving in time. If one 
 #### 8. Boundary layer (BL) 
 ##### a) Aerospace: 
 - As I mentioned before, the resolution of boundary layer is required to resolve vortex structures. They can be a big source of drag. 
+Take a look at the tip vortices from a 1m blade with a chord length of 0.405 m operating at a Reynolds number of 250,000 at a Mach number of 0.24. 
+![rect_tipvortex](https://user-images.githubusercontent.com/10886837/44286375-e47b0000-a236-11e8-8764-35a9be5a18b6.png)
 
 ##### b) Ocean: 
 - Rarely in coastal engineering, the goal is to resolve the BL. So a logarithmic profile, linear or quadratic profile fit can be done to satisfy the no-slip condition. 

@@ -4,8 +4,11 @@ author: Taran Kalra
 email: tarankalra@gmail.com
 description: Thoughts on fluid dynamics modelling and HPC 
 github_username:  tarankalra-usgs
-About Me: "aboutme"
 
+header_pages:
+  - about.md
+  - portfolio.md
+  
 # Build settings
 markdown: kramdown
 theme: minima

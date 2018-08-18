@@ -1,7 +1,9 @@
+---
 layout: page
 title: About
 permalink: /about/
 ---
+
 
 Hi I am Taran and I am writing this blog to share my experiences from two different flavors of numerical modeling. 
 

@@ -11,7 +11,8 @@ header_pages:
   - about.md
   - portfolio.md
 
-google_analytics: UA-124238619-1
+google_analytics: UA-124255809-1
+
 
 # Build settings
 markdown: kramdown

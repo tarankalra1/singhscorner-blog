@@ -10,7 +10,9 @@ researchgate_username: Tarandeep_Kalra2
 header_pages:
   - about.md
   - portfolio.md
-  
+
+google_analytics: UA-124238619-1
+
 # Build settings
 markdown: kramdown
 theme: minima

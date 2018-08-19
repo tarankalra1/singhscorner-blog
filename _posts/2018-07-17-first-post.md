@@ -114,7 +114,7 @@ except for vertical direction). So the child is slowly evolving in time. If one 
 - Rarely in coastal engineering, the goal is to resolve the BL. So a logarithmic profile, linear or quadratic profile fit can be done to satisfy the no-slip condition. 
 
 ## Some final thoughts: 
-The differences that I mentioned above are really broad and each of the 8 points can be elaborated to greater details. I may do that in the future posts.
+The differences that I mentioned above are really summarized and each of the 8 points can be elaborated to greater details. I may do that in the future posts.
 
 In general, the concern in aerospace applications is to design rotors, wings etc. and the need of the hour is to resolve small scale physics. On the other hand, in coastal science applications the need is to predict storms, erosion patterns etc. for regional systems such as bays, islands and the need of the hour is to account for different physical phenomenon. In the latter, the local bathymetry, wind pattern, even local phyical features such as seagrass can change the dynamics of a system. 
 

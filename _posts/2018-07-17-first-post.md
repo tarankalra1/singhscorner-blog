@@ -30,7 +30,8 @@ Now we will proceed with the differences in the model equations and setup method
 
 #### *b) Ocean*:
 
-- The ocean model ROMS is a hydrostatic model. It cannot resolve the fine structures.  Hydrostatic models only consider pressure changes with depth and what it means from a practical standpoint is that if the horizontal scales in the model are much larger than the vertical scales, one does not have to resolve the non-hydrostatic flow. So a hydrostatic model would not resolve solve scale features in the horizontal direction which is okay for coastal engineering applications. Take a look at the difference of a classical problem of lock exchange (Similar to the classical shock tube problem in aerospace). Two different density fluids are mixed. The hydrostatic model is showing a front but non-hydrostatic model also captures the vortex features (horizontal features). This image is from the volume of oceanography published by Fringer et al. 2006. 
+- The ocean model ROMS is a hydrostatic model. It cannot resolve the fine structures.  Hydrostatic models only consider pressure changes with depth and what it means from a practical standpoint is that if the horizontal scales in the model are much larger than the vertical scales, one does not have to resolve the non-hydrostatic flow. So a hydrostatic model would not resolve solve scale features in the horizontal direction which is okay for coastal engineering applications. Take a look at the difference of a classical problem of lock exchange (Similar to the classical shock tube problem in aerospace). Two different density fluids are mixed. The hydrostatic model is showing a front but non-hydrostatic model also captures the vortex features (horizontal features). This image is from the volume of oceanography published by Fringer et al. 2006. It shows the comparison of hydrostatic vs non hydrostatic model results. Normally one would need to resolve for the *billow* type features for coastal science applications.  
+
 ![hydrostatic_vs_nonhydrostatic model](https://user-images.githubusercontent.com/10886837/44286198-38391980-a236-11e8-8248-0ff4d0875465.png)
 
 - In addition to the NS-equations, one has to solve for tracer equations using the material transport equation. Tracers are quantities that advect and diffuse in the system. Because water density is dependent on salinity and temperature, the tracer equations for these two are solved separately. 
@@ -43,7 +44,8 @@ Now we will proceed with the differences in the model equations and setup method
 - Typical grid types for blades are C-O type or C-H type grids
 
 - Reynolds number (Re) determines the extent of mesh resolution in aerospace applications because it is desired that one resolves the boundary layer. A blade operating at a subscale rotor of 1m radius and 0.045 m chord operating at a Mach number of 0.24 and Re=250,000. To resolve the boundary layer using NASA's viscous wall spacing calculator (y+=1)
-gives a minimum grid size required on the blade to Note that this is dimension along the chordwise direction for the rotor blade (Link to viscous calculator - https://geolab.larc.nasa.gov/APPS/YPlus/). Look at the C-O type blade mesh. 
+gives a minimum grid size required on the blade to Note that this is dimension along the chordwise direction for the rotor blade (Link to viscous calculator - https://geolab.larc.nasa.gov/APPS/YPlus/). 
+*Look at the C-O type blade mesh*. 
 
 <img  src="https://user-images.githubusercontent.com/10886837/44048498-81ce502c-9eff-11e8-9084-bd358fb8d79b.png" width="500" height="500" />
 
@@ -106,8 +108,7 @@ except for vertical direction). So the child is slowly evolving in time. If one 
 #### *a) Aerospace*:
 - As I mentioned before, the resolution of boundary layer is required to resolve vortex structures. They can be a big source of drag. 
 Take a look at the tip vortices from a 1m blade with a chord length of 0.405 m operating at a Reynolds number of 250,000 at a Mach number of 0.24. 
-![rect_tipvortex](https://user-images.githubusercontent.com/10886837/44286375-e47b0000-a236-11e8-8764-35a9be5a18b6.png)
-
+<img  src="https://user-images.githubusercontent.com/10886837/44286375-e47b0000-a236-11e8-8764-35a9be5a18b6.png" width="500" height="500" />
 #### *b) Ocean*:
 - Rarely in coastal engineering, the goal is to resolve the BL. So a logarithmic profile, linear or quadratic profile fit can be done to satisfy the no-slip condition. 
 

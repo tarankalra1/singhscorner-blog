@@ -73,7 +73,7 @@ to have steadiness within an unsteady step.
 
 #### *b) Ocean*:
 - Explicit time marching is used in horizontal directions. 
-Mode splitting- Time steps are split up in 2 D and 3 D modes. The 2D resolves the depth averaged system (barotropic) i.e. density does not change with depth. 3D resolves the baroclinic system i.e. density is depth dependent on depth. Both the modes are coupled to each other u 
+Mode splitting- Time steps are split up in 2 D and 3 D modes. The 2D resolves the depth averaged system (barotropic) i.e. density does not change with depth. 3D resolves the baroclinic system i.e. density is depth dependent on depth. Both the modes are coupled to each other to exchange velocity fields from the 2 D to 3 D modes. 
 
 
 #### 5. Overset meshes/nesting
@@ -83,7 +83,7 @@ Nesting is done to resolve areas of importance in a flow field by having multipl
 - The curvilinear coordinates in aerospace applications utilize overset grids in such a way that the child grid (embedded grid) is stretched at the boundaries to match the cell size of the background mesh. This is to reduce the interpolation errors. 
 
 #### *b) Ocean*:
-- In ocean/atmosphere models, the child grid or embedded mesh does not stretch at the boundaries. The mesh is generally over a smaller region so it is much flattened out. That means the mesh is not very curvy and the interpolation errors would be minimal as long as it overlaps with the parent grid. Because the vertical resolution is sufficiently resolved in both parent and child grid, the vertical spacing is normall not altered from child to parent in ocean/atmosphere models. That means only horizontal grid is nested. 
+- In ocean/atmosphere models, the child grid or embedded mesh does not stretch at the boundaries. The mesh is generally over a smaller region so it is much flattened out. That means the mesh is not very curvy and the interpolation errors would be minimal as long as it overlaps with the parent grid and one knows the ratio of child to parent grid. Because the vertical resolution is sufficiently resolved in both parent and child grid, the vertical spacing is normall not altered from child to parent in ocean/atmosphere models. That means only horizontal grid is nested. 
 
 
 #### 6. Domain decomposition for parallel processing 
@@ -113,7 +113,7 @@ except for vertical direction). So the child is slowly evolving in time. If one 
 - Rarely in coastal engineering, the goal is to resolve the BL. So a logarithmic profile, linear or quadratic profile fit can be done to satisfy the no-slip condition. 
 
 ## Some final thoughts: 
-The differences that I mentioned above are really summarized and each of the 8 points can be elaborated for more clairty. I may do that in the future posts.
+The differences that I mentioned above are really summarized and each of the 8 points can be elaborated for more clarity. I may do that in the future posts.
 
 In general, the concern in aerospace applications is to design rotors, wings etc. and the need of the hour is to resolve small scale physics. On the other hand, in coastal science applications the need is to predict storms, erosion patterns etc. for regional systems such as bays, islands and the need of the hour is to account for different physical phenomenon. In the latter, the local bathymetry, wind pattern, even local phyical features such as seagrass can change the dynamics of a system. 
 

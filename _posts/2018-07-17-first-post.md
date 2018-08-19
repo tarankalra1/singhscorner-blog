@@ -38,6 +38,8 @@ Now we will proceed with the differences in the model equations and setup method
 
 - Following the above, the equation of state is not the same as in aerodynamics because density is dependent on salinity and temperature. 
 
+-Boussinesq approximation in ocean models generally refers to the fact that the perturbations in density are small compared to the mean density (*very different from aerospace models*). The implication to the N-S equations is the flow can be considered incompressible. In wave models, it refers to the approximation that the water waves are having a longer wavelength compared to the water depth.  
+
 #### 2. Grids/Meshes
 
 #### *a) Aerospace*:
@@ -72,9 +74,7 @@ to have steadiness within an unsteady step.
 
 #### *b) Ocean*:
 - Explicit time marching is used in horizontal directions. 
-Mode splitting- Time steps are split up in 2 D and 3 D modes
-2D resolves the depth averaged system (barotropic) i.e. density does not change with depth
-3D resolves the baroclinic system i.e. density is depth dependent
+Mode splitting- Time steps are split up in 2 D and 3 D modes. The 2D resolves the depth averaged system (barotropic) i.e. density does not change with depth. 3D resolves the baroclinic system i.e. density is depth dependent on depth. Both the modes are coupled to each other u 
 
 
 #### 5. Overset meshes/nesting
@@ -89,13 +89,13 @@ Nesting is done to resolve areas of importance in a flow field by having multipl
 
 #### 6. Domain decomposition for parallel processing 
 #### *a) Aerospace*:
-- In overset grids/nested grids for aerospace the embedded grid and the background grid both do calculations at the same type. So, one can do the domain decomposition over all grids. so if you have 2 grids. You can divide them into "x" number of processors. The exchange of information happens at each time step at the boundaries from child to parent.
+- In overset grids/nested grids for aerospace the embedded grid and the background grid both do calculations at the same type. So, one can do the domain decomposition over all grids. so if you have 2 grids. You can divide both the grids into "N" number of processors. The exchange of information happens at each time step at the boundaries from child to parent.
 So effectively you can use more computational power as you are domain decomposing all grids.
 
 #### *b) Ocean*:
 - In atmosphere/ocean models the domain decomposition happens only at a particular grid first so first the parent would run, then the child would run over the same processors. this means that when parent is running, child has to wait and vice versa. Then the information from child to parent is sent back. That completes one cycle of time stepping. 
-The reason for this is that in these models, not only solve for velocity and pressure evolve but also tracers evolve. For child grid usually a smaller time step is required for CFL criterion (Most models are explicit in time marching
-except for vertical direction). So the child is slowly evolving in time. If one hypothetically run all the grids in parallel that would mean that child and parent are both evolving differently.
+The reason for this is that in these models, not only solve for velocity and pressure evolve (N-S equations) but also tracers evolve. For child grid usually a smaller time step is required for CFL criterion (Most models are explicit in time marching
+except for vertical direction). So the child is slowly evolving in time. If one hypothetically ran all the grids in parallel that would mean that child and parent are both evolving differently.
 
 #### 7. Turbulence Modeling
 #### *a) Aerospace*:

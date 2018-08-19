@@ -108,7 +108,8 @@ except for vertical direction). So the child is slowly evolving in time. If one 
 #### *a) Aerospace*:
 - As I mentioned before, the resolution of boundary layer is required to resolve vortex structures. They can be a big source of drag. 
 Take a look at the tip vortices from a 1m blade with a chord length of 0.405 m operating at a Reynolds number of 250,000 at a Mach number of 0.24. 
-<img  src="https://user-images.githubusercontent.com/10886837/44286375-e47b0000-a236-11e8-8764-35a9be5a18b6.png" width="500" height="500" />
+<img  src="https://user-images.githubusercontent.com/10886837/44286375-e47b0000-a236-11e8-8764-35a9be5a18b6.png" width="300" height="300" />
+
 #### *b) Ocean*:
 - Rarely in coastal engineering, the goal is to resolve the BL. So a logarithmic profile, linear or quadratic profile fit can be done to satisfy the no-slip condition. 
 

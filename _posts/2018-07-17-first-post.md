@@ -45,8 +45,8 @@ Now we will proceed with the differences in the model equations and setup method
 #### *a) Aerospace*:
 - Typical grid types for blades are C-O type or C-H type grids
 
-- Reynolds number (Re) determines the extent of mesh resolution in aerospace applications because it is desired that one resolves the boundary layer. A blade operating at a subscale rotor of 1m radius and 0.045 m chord operating at a Mach number of 0.24 and Re=250,000. To resolve the boundary layer using NASA's viscous wall spacing calculator (y+=1)
-gives a minimum grid size required on the blade to Note that this is dimension along the chordwise direction for the rotor blade (Link to viscous calculator - https://geolab.larc.nasa.gov/APPS/YPlus/). 
+- Reynolds number (Re) determines the extent of mesh resolution in aerospace applications because it is desired that one resolves the boundary layer. To resolve the boundary layer, we can calculate the minimum grid size using NASA's viscous wall spacing calculator (y+=1)
+(Link to viscous calculator - https://geolab.larc.nasa.gov/APPS/YPlus/). 
 *Look at the C-O type blade mesh*. 
 
 <img  src="https://user-images.githubusercontent.com/10886837/44048498-81ce502c-9eff-11e8-9084-bd358fb8d79b.png" width="500" height="500" />
@@ -55,9 +55,8 @@ gives a minimum grid size required on the blade to Note that this is dimension a
 #### *b) Ocean*:
 - Typical grid types for coastal applications use Arakawa C-grids. Because the water level is varying, one has to resolve that and there is a method known as sigma coordinate system that allows for vertical layers to change dynamically. There are various flavors of sigma coordinate systems depending on what one is trying to resolve- free water surface, boundary layer at the bottom of the ocean etc.  
 
-- In ocean model for coastal engineering applications, grid resolution is decided by the amount of computational resources. It is of the order of 30-40 m. at the finest near to a coast in the horizontal (both x and y). Look at the grid of Barnegat Bay in New Jersey with a horizontal resolution of 40m. 
+- The aspect ratio of grid cells is usually large. The horizontal cells are very coarse (of the order of 10's of meters or 1 to 2 km sometimes) compared to vertical grid cells (of the order of 1 m) for coastal applications. The area that we are trying to model horizontally is of the order of kilometers while the depths are ranging from 1m to 50m. Beyond 200m, deep ocean dynamics prevail and one cannot rely on the setups as described here. Take a look at the grid of Barnegat Bay in New Jersey with a horizontal resolution of 40m. It is of the order of 30-40 m. at the finest near to a coast in the horizontal (both x and y). 
 
-- The aspect ratio of grid cells is usually 100:1 (Horizontal to vertical). The horizontal cells are very coarse compared to vertical grid cells for coastal applications. The area that we are trying to model horizontally is of the order of kilometers while the depths are ranging from 1m to 50m. Beyond 200m, deep ocean dynamics prevail and one cannot rely on the setups as described here. 
 
 #### 3. Advection schemes
 #### *a) Aerospace*:
@@ -81,10 +80,10 @@ Mode splitting- Time steps are split up in 2 D and 3 D modes. The 2D resolves th
 Nesting is done to resolve areas of importance in a flow field by having multiple meshes in the same region and telescoping from coarser to finer resolution. 
 
 #### *a) Aerospace*:
-- In curvilinear coordinates in aerospace applications, over set grids stretch at the boundaries to match the ratios of the background mesh.
+- The curvilinear coordinates in aerospace applications utilize overset grids in such a way that the child grid (embedded grid) is stretched at the boundaries to match the cell size of the background mesh. This is to reduce the interpolation errors. 
 
 #### *b) Ocean*:
-- In ocean/atmosphere models the (child grid or embedded mesh) does not stretch at the boundaries as the mesh is generally over a smaller region so it is much flattened out. That means the mesh is not very curvy and the interpolation errors would be minimal as long as it overlaps with the parent grid. Also the vertical spacing is not altered from child to parent in ocean/atmosphere models. That means only horizontal grid is nested. 
+- In ocean/atmosphere models, the child grid or embedded mesh does not stretch at the boundaries. The mesh is generally over a smaller region so it is much flattened out. That means the mesh is not very curvy and the interpolation errors would be minimal as long as it overlaps with the parent grid. Because the vertical resolution is sufficiently resolved in both parent and child grid, the vertical spacing is normall not altered from child to parent in ocean/atmosphere models. That means only horizontal grid is nested. 
 
 
 #### 6. Domain decomposition for parallel processing 

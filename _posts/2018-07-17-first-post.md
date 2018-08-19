@@ -7,7 +7,7 @@ The notes are highly generalized and present limited examples.
 
 Brief description of the aerospace and ocean model:
 
-##### a) Aerospace model:
+#### *a) Aerospace model*:
 The code that I worked for aerospace application in my PhD was called OVERTURNS.
 It is being developed and maintained at University of Maryland. It has been widely used in rotorcraft
 applications. Another example of a popular choice for rotorcraft simulations is NASA's OVERFLOW.

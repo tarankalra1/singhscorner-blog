@@ -122,3 +122,5 @@ To put it simply, the challenges are entirely different.
 
 
 References for this post:
+1. O. B. Fringer, J. C. McWilliams, and R. L. Street, 2006, "A new hybrid model for coastal simulations", Oceanography, 19 (1), 46-59.
+2. T. S. Kalra, 2014, CFD modeling and analysis of rotor wake in hover interacting with a ground plane", PhD Dissertation, University of Maryland.

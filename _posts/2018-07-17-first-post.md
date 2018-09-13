@@ -56,9 +56,9 @@ Now we will proceed with the differences in the model equations and setup method
 - Typical grid types for coastal applications use Arakawa C-grids. Because the water level is varying, one has to resolve that and there is a method known as sigma coordinate system that allows for vertical layers to change dynamically. There are various flavors of sigma coordinate systems depending on what one is trying to resolve- free water surface, boundary layer at the bottom of the ocean etc.  
 
 - The aspect ratio of grid cells is usually large. The horizontal cells are very coarse (of the order of 10's of meters or 1 to 2 km sometimes) compared to vertical grid cells (of the order of 1 m) for coastal applications. The area that we are trying to model horizontally is of the order of kilometers while the depths are ranging from 1m to 50m. Beyond 200m, deep ocean dynamics prevail and one cannot rely on the setups as described here. Take a look at the grid of Barnegat Bay in New Jersey with a horizontal resolution of 40m. The image is processed to show only every tenth point point in the domain. Thank you to Zafer Defne at USGS Woods Hole for providing this image. Also look at the snapshot of Barnegat Bay from Google Earth.   
-<img  src="https://user-images.githubusercontent.com/10886837/45499866-3b4afb00-b74b-11e8-9852-8b9e1d916ac4.png" width="200" height="200" /> 
+<img  src="https://user-images.githubusercontent.com/10886837/45499866-3b4afb00-b74b-11e8-9852-8b9e1d916ac4.png" width="300" height="300" /> 
 
-<img  src="https://user-images.githubusercontent.com/10886837/45499836-25d5d100-b74b-11e8-9d2a-0bfac7cc90fd.png" width="200" height="200" />
+<img  src="https://user-images.githubusercontent.com/10886837/45499836-25d5d100-b74b-11e8-9d2a-0bfac7cc90fd.png" width="300" height="300" />
 
 
 #### 3. Advection schemes

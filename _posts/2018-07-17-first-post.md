@@ -30,7 +30,7 @@ Now we will proceed with the differences in the model equations and setup method
 
 #### *b) Ocean*:
 
-- The ocean model ROMS is a hydrostatic model. It cannot resolve the fine structures.  Hydrostatic models only consider pressure changes with depth and what it means from a practical standpoint is that if the horizontal scales in the model are much larger than the vertical scales, one does not have to resolve the non-hydrostatic flow. So a hydrostatic model would not resolve solve scale features in the horizontal direction which is okay for coastal engineering applications. Take a look at the difference of a classical problem of lock exchange (Similar to the classical shock tube problem in aerospace). Two different density fluids are mixed. The hydrostatic model is showing a front but non-hydrostatic model also captures the vortex features (horizontal features). This image is from the volume of oceanography published by Fringer et al. 2006. It shows the comparison of hydrostatic vs non hydrostatic model results. Normally one would _not_ need to resolve for the *billow* type features for coastal science applications.  
+- The ocean model ROMS is a hydrostatic model. It cannot resolve the fine structures.  Hydrostatic models only consider pressure changes with depth and what it means from a practical standpoint is that if the horizontal scales in the model are much larger than the vertical scales, one does not have to resolve the non-hydrostatic flow. So a hydrostatic model would not resolve solve small scale features in the horizontal direction which is okay for coastal engineering applications. Take a look at the difference of a classical problem of lock exchange (Similar to the classical shock tube problem in aerospace). Two different density fluids are mixed. The hydrostatic model is showing a front but non-hydrostatic model also captures the vortex-type features (horizontal features). This image is from the volume of oceanography published by Fringer et al. 2006. It shows the comparison of hydrostatic vs non hydrostatic model results. Normally one would _not_ need to resolve for the *billow* type features for coastal science applications.  
 
 ![hydrostatic_vs_nonhydrostatic model](https://user-images.githubusercontent.com/10886837/44286198-38391980-a236-11e8-8248-0ff4d0875465.png)
 
@@ -55,8 +55,11 @@ Now we will proceed with the differences in the model equations and setup method
 #### *b) Ocean*:
 - Typical grid types for coastal applications use Arakawa C-grids. Because the water level is varying, one has to resolve that and there is a method known as sigma coordinate system that allows for vertical layers to change dynamically. There are various flavors of sigma coordinate systems depending on what one is trying to resolve- free water surface, boundary layer at the bottom of the ocean etc.  
 
-- The aspect ratio of grid cells is usually large. The horizontal cells are very coarse (of the order of 10's of meters or 1 to 2 km sometimes) compared to vertical grid cells (of the order of 1 m) for coastal applications. The area that we are trying to model horizontally is of the order of kilometers while the depths are ranging from 1m to 50m. Beyond 200m, deep ocean dynamics prevail and one cannot rely on the setups as described here. Take a look at the grid of Barnegat Bay in New Jersey with a horizontal resolution of 40m. It is of the order of 30-40 m. at the finest near to a coast in the horizontal (both x and y). 
+- The aspect ratio of grid cells is usually large. The horizontal cells are very coarse (of the order of 10's of meters or 1 to 2 km sometimes) compared to vertical grid cells (of the order of 1 m) for coastal applications. The area that we are trying to model horizontally is of the order of kilometers while the depths are ranging from 1m to 50m. Beyond 200m, deep ocean dynamics prevail and one cannot rely on the setups as described here. Take a look at the grid of Barnegat Bay in New Jersey with a horizontal resolution of 40m. The image is processed to show only every tenth point point in the domain. Thank you to Zafer Defne at USGS Woods Hole for providing this image. Also look at the snapshot of Barnegat Bay from Google Earth.  
+![bbleh_x10](https://user-images.githubusercontent.com/10886837/45499866-3b4afb00-b74b-11e8-9852-8b9e1d916ac4.png)
 
+![barnegat_bay_nj](https://user-images.githubusercontent.com/10886837/45499836-25d5d100-b74b-11e8-9d2a-0bfac7cc90fd.png)
+width="400" height="400" />
 
 #### 3. Advection schemes
 #### *a) Aerospace*:
@@ -123,3 +126,4 @@ To put it simply, the challenges are entirely different.
 References for this post:
 1. O. B. Fringer, J. C. McWilliams, and R. L. Street, 2006, "A new hybrid model for coastal simulations", Oceanography, 19 (1), 46-59.
 2. T. S. Kalra, 2014, CFD modeling and analysis of rotor wake in hover interacting with a ground plane", PhD Dissertation, University of Maryland.
+3. Z. Defne, N.K. Ganju, "Quantifying the residence time and flushing characteristics of a shallow, back-barrier estuary: application of hydrodynamic and particle tracking models," Estuaries and Coasts 38 (5), 1719-1734	44	2015

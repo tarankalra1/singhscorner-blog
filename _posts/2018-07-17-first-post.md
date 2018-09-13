@@ -116,7 +116,7 @@ except for vertical direction). So the child is slowly evolving in time. If one 
 ## Some final thoughts: 
 The differences that I mentioned above are really summarized and each of the 8 points can be elaborated for more clarity. I may do that in the future posts.
 
-In general, the concern in aerospace applications is to design rotors, wings etc. and the need of the hour is to resolve small scale physics. On the other hand, in coastal science applications the need is to predict storms, erosion patterns etc. for regional systems such as bays, islands and the need of the hour is to account for different physical phenomenon. In the latter, the local bathymetry, wind pattern, even local phyical features such as seagrass can change the dynamics of a system. 
+In general, the concern in aerospace applications is to *design* rotors, wings etc. and the need of the hour is to resolve small scale physics. On the other hand, in coastal science applications; the need is to understand the physical phenomenon that causes storms, erosion patterns etc. at a larger scale. This is to study regional systems such as estuaries, bays and islands. In the latter, the local bathymetry, wind pattern, even local physical features such as seagrass can change the dynamics of a system. 
 
 To put it simply, the challenges are entirely different. 
 

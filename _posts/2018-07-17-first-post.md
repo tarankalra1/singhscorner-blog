@@ -56,9 +56,9 @@ Now we will proceed with the differences in the model equations and setup method
 - Typical grid types for coastal applications use Arakawa C-grids. Because the water level is varying, one has to resolve that and there is a method known as sigma coordinate system that allows for vertical layers to change dynamically. There are various flavors of sigma coordinate systems depending on what one is trying to resolve- free water surface, boundary layer at the bottom of the ocean etc.  
 
 - The aspect ratio of grid cells is usually large. The horizontal cells are very coarse (of the order of 10's of meters or 1 to 2 km sometimes) compared to vertical grid cells (of the order of 1 m) for coastal applications. The area that we are trying to model horizontally is of the order of kilometers while the depths are ranging from 1m to 50m. Beyond 200m, deep ocean dynamics prevail and one cannot rely on the setups as described here. Take a look at the grid of Barnegat Bay in New Jersey with a horizontal resolution of 40m. The image is processed to show only every tenth point point in the domain. Thank you to Zafer Defne at USGS Woods Hole for providing this image. Also look at the snapshot of Barnegat Bay from Google Earth.   
-<img  src="https://user-images.githubusercontent.com/10886837/45499866-3b4afb00-b74b-11e8-9852-8b9e1d916ac4.png" width="300" height="300" /> 
+<img  src="https://user-images.githubusercontent.com/10886837/45499866-3b4afb00-b74b-11e8-9852-8b9e1d916ac4.png" width="400" height="400" /> 
 
-<img  src="https://user-images.githubusercontent.com/10886837/45499836-25d5d100-b74b-11e8-9d2a-0bfac7cc90fd.png" width="300" height="300" />
+<img  src="https://user-images.githubusercontent.com/10886837/45499836-25d5d100-b74b-11e8-9d2a-0bfac7cc90fd.png" width="300" height="400" />
 
 
 #### 3. Advection schemes
@@ -86,7 +86,7 @@ Nesting is done to resolve areas of importance in a flow field by having multipl
 - The curvilinear coordinates in aerospace applications utilize overset grids in such a way that the child grid (embedded grid) is stretched at the boundaries to match the cell size of the background mesh. This is to reduce the interpolation errors. 
 
 #### *b) Ocean*:
-- In ocean/atmosphere models, the child grid or embedded mesh does not stretch at the boundaries. The mesh is generally over a smaller region so it is much flattened out. That means the mesh is not very curvy and the interpolation errors would be minimal as long as it overlaps with the parent grid and one knows the ratio of child to parent grid. Because the vertical resolution is sufficiently resolved in both parent and child grid, the vertical spacing is normall not altered from child to parent in ocean/atmosphere models. That means only horizontal grid is nested. 
+- In ocean/atmosphere models, the child grid or embedded mesh does not stretch at the boundaries. The mesh is generally over a smaller region so it is much flattened out. That means the mesh is not very curvy and the interpolation errors would be minimal as long as it overlaps with the parent grid and one knows the ratio of child to parent grid. Because the vertical resolution is sufficiently resolved in both parent and child grid, the vertical spacing is normally not altered from child to parent in ocean/atmosphere models. That means only horizontal grid is nested. 
 
 
 #### 6. Domain decomposition for parallel processing 

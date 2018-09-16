@@ -15,7 +15,7 @@ applications. Another example of a popular choice for rotorcraft simulations is 
 #### *b) Ocean*:
 The code that I currently develop and use is called COAWST. COAWST itself is a coupled model that consists of an ocean model
 ROMS, wave model SWAN and atmosphere model WRF. It is being developed and maintained at US Geological Survey's Woods Hole Marine Center. Within the ocean model, it has a sediment transport model, vegetation model and biogeochemistry models.
-The main purpose of COAWST development is to solve for coastal science problems. For instance one would application would be to study how a storm causes the sediment transport. 
+The main purpose of COAWST development is to solve for coastal science problems. For instance, one application would be to study how a hurricane/storm causes coastal erosion. 
 
 The similarities in both models (aerodynamics and ocean model) include that they solve for N-S equations using curvilinear structured grids. These notes explain how some terminology refers to the same things or sometimes to different things in the two different worlds of modeling.
 
@@ -30,7 +30,7 @@ Now we will proceed with the differences in the model equations and setup method
 
 #### *b) Ocean*:
 
-- The ocean model ROMS is a hydrostatic model. It cannot resolve the fine structures.  Hydrostatic models only consider pressure changes with depth and what it means from a practical standpoint is that if the horizontal scales in the model are much larger than the vertical scales, one does not have to resolve the non-hydrostatic flow. So a hydrostatic model would not resolve solve small scale features in the horizontal direction which is okay for coastal engineering applications. Take a look at the difference of a classical problem of lock exchange (Similar to the classical shock tube problem in aerospace). Two different density fluids are mixed. The hydrostatic model is showing a front but non-hydrostatic model also captures the vortex-type features (horizontal features). This image is from the volume of oceanography published by Fringer et al. 2006. It shows the comparison of hydrostatic vs non hydrostatic model results. Normally one would _not_ need to resolve for the *billow* type features for coastal science applications.  
+- The ocean model ROMS is a hydrostatic model. It cannot resolve the fine structures.  Hydrostatic models only consider pressure changes with depth and what it means from a practical standpoint is that if the horizontal scales in the model are much larger than the vertical scales, one does not have to resolve the non-hydrostatic flow. So a hydrostatic model would not resolve small scale features in the horizontal direction which is okay for coastal engineering applications. Take a look at the difference of a classical problem of lock exchange (Similar to the classical shock tube problem in aerospace). Two different density fluids are mixed. The hydrostatic model is showing a front but non-hydrostatic model also captures the vortex-type features (horizontal features). This image is from the volume of oceanography published by Fringer et al. 2006. It shows the comparison of hydrostatic vs non hydrostatic model results. Normally one would _not_ need to resolve for the *billow* type features for coastal science applications.  
 
 ![hydrostatic_vs_nonhydrostatic model](https://user-images.githubusercontent.com/10886837/44286198-38391980-a236-11e8-8248-0ff4d0875465.png)
 

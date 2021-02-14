@@ -13,7 +13,6 @@ My background is:
 * Currently working as Computing Scientist to develop a coupled ocean-wave-atmosphere model at US Geological Survey, Woods Hole.
 * B.S, M.S., Ph.D in aerospace engineering with focus on CFD modeling of laboratory scale rotors.
 
-Click [here](https://www.dropbox.com/history/Resume/CV_TarandeepKalra.pdf?_subject_uid=7651172&preview=CV_TarandeepKalra.pdf) for the complete CV. 
-
- 
+A list of my research papers can be found here: 
+https://scholar.google.com/citations?user=4t-6LfUAAAAJ&hl=en 
  

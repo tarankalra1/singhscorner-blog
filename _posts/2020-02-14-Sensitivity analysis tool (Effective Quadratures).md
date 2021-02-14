@@ -17,10 +17,15 @@ Following this, a research effort in 2017 involved in using the sensitivity anal
 The advantage of using the EQ methodology was that the user could provide a wide range of values of these inputs to the “solver”. It would then sample from the range and inform the user with a subset of simulations to be performed with various combinations of inputs. In this case study with four inputs, a total of 15 simulations were found to be required by the EQ software, corresponding to the number of coefﬁcients in a 4-D polynomial with a maximum order of 2. Sobol indices were found that quantified the relationship between the input and output parameters. Table 1 shows the results from the study. In simple words, results from table 1 imply that the wave dissipation depends more on stem density than any other input seagrass input. On the contrary, water level change depended both on seagrass height and stem density. The quantification of sensitivity of inputs to output metrics gives a detailed insight into the mechanics of the model.
 
 Plant Stem Density	Plant Height	Plant Diameter	Plant Thickness
+
 Wave dissipation	0.68	0.24	0.032	0.01
+
 Kinetic energy	0.36	0.44	0.12	0.03
+
 Maximum water level change	0.38	0.43	0.15	0.01
+
 Turbulent kinetic energy	0.35	0.42	0.12	0.03
+
 Table 1: Sobol Indices for output metrics (Source Kalra et al. 2017).
 
 One can extrapolate to using a similar methodology to understand the variation of sediment inputs or biological inputs on the model input that in nature also exhibit a large variation.
@@ -39,5 +44,4 @@ In the end, the next few decades of coastal models would still work with similar
 
 References:
 
-Hurricane Costs 1
 Sensitivity analysis of a coupled hydrodynamic-vegetation model using the effectively subsampled quadratures method (ESQM v5. 2) 1, TS Kalra, A Aretxabaleta, P Seshadri, NK Ganju, Journal of Geophysical Model Development 2017

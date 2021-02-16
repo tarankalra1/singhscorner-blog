@@ -14,5 +14,6 @@ My background is:
 * B.S, M.S., Ph.D in aerospace engineering with focus on CFD modeling of laboratory scale rotors.
 
 A list of my research papers can be found here: 
+
 https://scholar.google.com/citations?user=4t-6LfUAAAAJ&hl=en 
  

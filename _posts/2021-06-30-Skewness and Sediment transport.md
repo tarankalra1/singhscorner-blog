@@ -6,9 +6,7 @@ of a bedload method in the COAWST model. The new bedload method in COAWST model 
 
 One issue that the methodology of obtaining asymmetric wave shape is that the current methods only provide an asymmetry in such a way that crest cycle velocity and acceleration exceeds trough cycle. This is referred to as having positively skewed waves. However, when we look into near bed data of waves, the math of that analysis provides us with both positively and negatively skewed waves. So what does that mean ? Do negatively skewed waves exist in real life ? What are the repercussions of that to bedload transport ? There is one good study of Crawford and Hay on this topic. Because the methodology in the model never predicts negatively skewed waves, are we overestimating the bedload in one direction (onshore ) ? 
 
-So in this post, I am thinking about the connection between skewness, ripple migration and sediment transport. 
-
-
+So in this post, I am thinking about the connection between skewness and sediment transport. One way that sediment transport manifests in real life is through ripple migration.  
 The paper from Crawford and Hay (2001) is the first one that i found and the paper showed that  both negative and positive skewness at 3m depth during a storm event. Their work correlated positive skewness with onshore ripple migration and negative skewness with ripple offshore migration nonlinear irregular waves. From their paper: 
 
 _Crawford and Hay: "The close association between skewness and cross-shore bed form migration (both onshore and offshore) is new. This
@@ -37,12 +35,14 @@ diffused wave spectrum corresponded with negative skewness while a peaky wave sp
 For the morphodynamic model, my thoughts are that we need to improve our model calibration, we may first want to incorporate a
 way of having full wave spectrum information and if that gives bimodal shape before waves break, somehow we estimate negative skewness. We may need more field data to get negative skewness from wave spectrum or even if we don't have that data, we can atleast reduce onshore sediment transport for waves corresponding with bimodal wave spectrum. 
 
-Then once the waves break, use the information from  the Inwave model + mean flow to do the sediment transport and 
+Then once the waves break, use the information from  the Infragravity wave model + mean flow to do the sediment transport and 
 lower the dependence on vandera's method because vandera's method does not apply for breaking wave regime.
 
-This raises interesting research questions for implementations of parameterized methods to estimate asymmetric wave shapes and deriving bedload from them. May be in near future, we don't need to depend on parameterizations and can use phase resolved methods to get asymmetric wave shapes and then skewness would be a natural outcome from the model. We need more field data to correlate skewness direction and ripple migration direction. Another challenge in this work as far as observations are concerned is that when waves get stronger to transport sediment in any direction, we may not even have ripple migration and then we need ways to quantify suspended sediment to a certain height above bottom. I guess like sheet flow. This can be done but like everything else, it is a cautionary tale.  
+This raises interesting research questions for implementations of parameterized methods to estimate asymmetric wave shapes and deriving bedload from them. May be in near future, we don't need to depend on parameterizations and can use phase resolved methods to get asymmetric wave shapes directly and then skewness would be a natural outcome from the model. We also need more field data to correlate skewness direction and ripple migration direction. Another challenge in this work as far as observations are concerned is that when waves get stronger to transport sediment in any direction, we may not even have ripple migration and then we need ways to quantify suspended sediment to a certain height above bottom. I guess like sheet flow. 
+
 
 
 References:
 1. Crawford & Hay: Linear transition ripple migration and wave orbital velocity skewness: Observations (dal.ca)
 2. Houser et al.: Divergent response of an intertidal swash bar - Houser - 2006 - Earth Surface Processes and Landforms - Wiley Online Library
+3. van der A, D.A., Ribberink, J.S., van der Werf, J.J., O'Donoghue, T., Buijsrogge, R.H., Kranenburg, W.M., (2013). Practical sand transport formula for non-breaking waves and currents. Coastal Engineering, 76, pp.26-42

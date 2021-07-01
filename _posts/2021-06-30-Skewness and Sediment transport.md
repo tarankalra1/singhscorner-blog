@@ -43,5 +43,5 @@ This raises interesting research questions for implementations of parameterized 
 
 
 References:
-Crawford & Hay: Linear transition ripple migration and wave orbital velocity skewness: Observations (dal.ca)
-Houser et al.: Divergent response of an intertidal swash bar - Houser - 2006 - Earth Surface Processes and Landforms - Wiley Online Library
+1. Crawford & Hay: Linear transition ripple migration and wave orbital velocity skewness: Observations (dal.ca)
+2. Houser et al.: Divergent response of an intertidal swash bar - Houser - 2006 - Earth Surface Processes and Landforms - Wiley Online Library

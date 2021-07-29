@@ -4,9 +4,9 @@ to setup the case and do read the summary of notes in the end.
 I will keep refining these notes. 
 
 
-----------------
-Initial file
-----------------
+
+***Initial file*** 
+
 SAV growth model, these are initialized using standard values
 following empirical relations (no need for source data)
 1. AGB
@@ -14,7 +14,7 @@ following empirical relations (no need for source data)
 3. EPB
 4. Plant density, diameter, thickness, height
 5. Dinsed
--------------------
+
 
 More inputs for Biogeochem model 
 6.LdetritusC   - Large fraction carbon detritus concentration 
@@ -33,10 +33,8 @@ More inputs for Biogeochem model
 19. temp 
 
 
-BOUNDARY Forcing 
------------------------
- Boundary forcing 
------------------------
+ 
+***Boundary forcing*** 
 It could be any direction. North, South, West, East
 1. temperature 
 2. salinity 

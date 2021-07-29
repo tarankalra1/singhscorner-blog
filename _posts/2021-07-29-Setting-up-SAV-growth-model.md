@@ -18,7 +18,7 @@ following empirical relations (no need for source data)
 
 More inputs for Biogeochem model->
 
-6.LdetritusC   - Large fraction carbon detritus concentration 
+6.LdetritusC   - Large fraction carbon detritus concentration
 7.LdetritusN
 8. NH4
 9. NO3
@@ -90,15 +90,15 @@ Below are inputs that had REAL geospatial variation in initial file for WFH
 On the other hand none of these inputs were specified in the idealized case. So
 biology model works without all this too. 
 
-6.LdetritusC   - Large fraction carbon detritus concentration 
-7.LdetritusN
-8. NH4 
-9. NO3
-10. TIC
-11. Cholorphyll 
-12. Oxygen
-13. phytoplankton
-14. Zooplankton 
+6.   LdetritusC   - Large fraction carbon detritus concentration 
+7.   LdetritusN
+8.   NH4 
+9.   NO3
+10.  TIC
+11.  Cholorphyll 
+12.  Oxygen
+13.  phytoplankton
+14.  Zooplankton 
 
  For boundary condition:  only temp, salt, oxygen, and climatology is required
 --> In WFH NO3 was input

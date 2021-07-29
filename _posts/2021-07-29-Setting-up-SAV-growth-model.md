@@ -84,9 +84,11 @@ Taran notes: May be not do it for CH Bay
 
 
 ****Taran summary notes****:
-For initial conditions: I don't know how one can get Ldetritus..all that initialized
-. some inputs are almost constnt in WFH so can assume no geospatial variation 
-What inputs had REAL geospatial variation in initial file
+For initial conditions: I don't know how one can get all of the initial tracers.
+Some inputs are almost constant in WFH so can assume no geospatial variation 
+Below are inputs that had REAL geospatial variation in initial file for WFH 
+On the other hand none of these inputs were specified in the idealized case. So
+biology model works without all this too. 
 
 6.LdetritusC   - Large fraction carbon detritus concentration 
 7.LdetritusN

@@ -17,11 +17,10 @@ following empirical relations (no need for source data)
 
 
 More inputs for Biogeochem model->
-
-6.LdetritusC   - Large fraction carbon detritus concentration
-7.LdetritusN
-8. NH4
-9. NO3
+6.  LdetritusC   - Large fraction carbon detritus concentration
+7.  LdetritusN
+8.  NH4
+9.  NO3
 10. SdetritusC - Small fraction carbon detritus concentration 
 11. SdetritusN 
 12. TIC - Total inorganic Carbon 

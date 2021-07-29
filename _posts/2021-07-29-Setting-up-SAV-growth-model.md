@@ -16,7 +16,8 @@ following empirical relations (no need for source data)
 5. Dinsed
 
 
-More inputs for Biogeochem model 
+More inputs for Biogeochem model->
+
 6.LdetritusC   - Large fraction carbon detritus concentration 
 7.LdetritusN
 8. NH4
@@ -40,9 +41,7 @@ It could be any direction. North, South, West, East
 2. salinity 
 3. Oxygen 
 
---------------
-Climatological boundary forcing
----------------
+***Climatological Boundary forcing*** 
 1. Uwind
 2. Vwind
 3. Pair
@@ -53,9 +52,9 @@ Climatological boundary forcing
 8. Lwrad
 9. cloud 
 
+***River forcing (if any)*** 
 In West Falmouth Harbor Additional bc forcing came from river inputs
 In West Falmouth setup, only NO3 was non-zero
-------------------
 1. temperature
 2. salt
 3. nutrient 
@@ -70,26 +69,21 @@ In West Falmouth setup, only NO3 was non-zero
 12. Alkanity
 13. Oxygen 
 
-
-------------------Other inputs and notes (Not to add confusion)
+***Analytical inputs***
+Other inputs and notes (Not to add confusion)
 ana_biology.h
 ana_clouds.h 
 ana_tobc.h -> Had oxygen temperture and salt coming from western bc.
 dont know why it was not done in bc file. 
 Taran notes: I think I am going to keep them same as WFH
---------------------------------------------
 
-
------------------
 ana_srflx- solar shortwave radiation- In idealized case, I have an input in ana file
 but in WFH I don't. Because I think WFH already has a bulk forcing file that contains 
 the inputs to get srflx within the model 
 Taran notes: May be not do it for CH Bay 
---------------------
 
 
------------------------------------------------------------
-Taran summary notes:
+****Taran summary notes****:
 For initial conditions: I don't know how one can get Ldetritus..all that initialized
 . some inputs are almost constnt in WFH so can assume no geospatial variation 
 What inputs had REAL geospatial variation in initial file
@@ -104,11 +98,9 @@ What inputs had REAL geospatial variation in initial file
 13. phytoplankton
 14. Zooplankton 
 
-----------------------------------------------------------------------------
-For boundary condition:  only temp, salt, oxygen, and climatology is required
+ For boundary condition:  only temp, salt, oxygen, and climatology is required
 --> In WFH NO3 was input
-----------------------------------------------------------------------------
-
+ 
 
 
  

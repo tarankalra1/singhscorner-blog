@@ -55,4 +55,6 @@ However, we need to test a simple case with flexible veg and see things work as 
 feature because it is super new. 
 
 A schematic description of vegetation properties
-<img  src="https://user-images.githubusercontent.com/10886837/97498698-08701b00-1943-11eb-9655-9f0e364b3c81." width="500" height="500" />
+<img  src="https://user-images.githubusercontent.com/10886837/97498698-08701b00-1943-11eb-9655-9f0e364b3c81.jpg" width="500" height="500" />
+<img  src="https://user-images.githubusercontent.com/10886837/154726424-198a401b-7eb9-4612-ab5f-fecd08527971.jpg" width="500" height="500" />
+

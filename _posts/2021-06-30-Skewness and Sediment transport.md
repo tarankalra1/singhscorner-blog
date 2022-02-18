@@ -41,6 +41,8 @@ lower the dependence on vandera's method because vandera's method does not apply
 
 This raises interesting research questions for implementations of parameterized methods to estimate asymmetric wave shapes and deriving bedload from them. May be in near future, we don't need to depend on parameterizations and can use phase resolved methods to get asymmetric wave shapes directly and then skewness would be a natural outcome from the model. We also need more field data to correlate skewness direction and ripple migration direction. Another challenge in this work as far as observations are concerned is that when waves get stronger to transport sediment in any direction, we may not even have ripple migration and then we need ways to quantify suspended sediment to a certain height above bottom. I guess like sheet flow. 
 
+Some thoughts of this application are here: 
+Shoaling Wave Shape Estimates from Field Observations and Derived Bedload Sediment Rates in the JMSE journal
 
 
 References:

@@ -1,6 +1,7 @@
 We implemented the vegetation model that can account for the effects of seagrass in 2016-2017. Since then it is one of the widely used modules in the COAWST framework.
-It is great when users with different backgrounds use the model because each application is unique and each user looks at the model from a different set of eyes. I am compiling 
-a list of commonly asked questions in this thread that come from various users. That way, it can help other users. 
+It is great when users with different backgrounds use the model because each application is unique and each user looks at the model from a different set of eyes. I am compiling a list of commonly asked questions in this thread that come from various users. That way, it can help other users. 
+In the COAWST model, we have recently added the module to account for spatially varying vegetation in SWAN (wave model) and spectral Cd. COAWST allows for flexibility
+of vegetation in both hydrodynamic + wave model. 
 
 List of questions-
 

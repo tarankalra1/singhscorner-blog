@@ -2,7 +2,8 @@ We implemented the vegetation model that can account for the effects of seagrass
 It is great when users with different backgrounds use the model because each application is unique and each user looks at the model from a different set of eyes. I am compiling 
 a list of commonly asked questions in this thread that come from various users. That way, it can help other users. 
 
-List of questions ! .
+List of questions-
+
 Q1.	What is the difference between vegetation diameter and thickness?
 
 Ans: The attached schematic shows the difference between diameter and thickness. Diameter is used in the frontal area calculation (drag) from SAV. Both thickness and diameter are used in the calculation of vegetation flexibility and turbulence changes due to SAV. The attached table from our paper summarizes the appearance of these inputs in the modeled equations within COAWST. The data on input is hard to find so I think in our paper we assumed based on another study (Larkum 2007) that thickness would be an order of magnitude smaller than diameter. In any case, this would depend on the species. 

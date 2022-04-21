@@ -43,7 +43,7 @@ This raises interesting research questions for implementations of parameterized 
 
 Some thoughts of this application are here: 
 Shoaling Wave Shape Estimates from Field Observations and Derived Bedload Sediment Rates in the JMSE journal
-
+https://www.mdpi.com/2077-1312/7/10/338/htm?msclkid=addcd145c17511ec9203fe5b8b0eae3e
 
 References:
 1. Crawford & Hay: Linear transition ripple migration and wave orbital velocity skewness: Observations (dal.ca)

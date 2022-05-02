@@ -5,9 +5,12 @@ permalink: /about/
 ---
 
 
-Hi, I am Taran and I am writing this blog to share my experiences from different flavors of numerical modeling. My area of expertise is coastal science and aerospace modeling. I am currently working as a Senior Scientist in Jupiter Intelligence (starting May 2022). I previously worked for seven years as a Computing Scientist to develop and apply the coupled ocean-wave-atmosphere model at US Geological Survey, Woods Hole. My graduate coursework focused on studying the rotor wake interaction in ground effect at University of Maryland. 
+Hi, I am Taran and I am writing this blog to share my experiences from different flavors of numerical modeling. My area of expertise is coastal science and aerospace modeling. I am currently working as a Senior Scientist in Jupiter Intelligence (starting May 2022). I previously worked for seven years as a Computing Scientist to develop and apply the coupled ocean-wave-atmosphere model at US Geological Survey, Woods Hole. My graduate coursework was in the field of aerospace engineering and focused on studying the rotor wake interaction in ground effect at University of Maryland. 
 
 I would also share some of my personal thoughts on the tools that I have learnt along the way. The blog's purpose is to preserve some of my notes and may be start a conversation with a fellow modeler/computational scientist/CFD developers and users.
+
+I have a website from my graduate coursework time that I no longer update. 
+https://sites.google.com/site/taranskalra/
 
 More on background:
 [Google scholar](https://scholar.google.com/citations?user=4t-6LfUAAAAJ&hl=en)

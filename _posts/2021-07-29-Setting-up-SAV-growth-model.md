@@ -103,5 +103,29 @@ biology model works without all this too.
 --> In WFH NO3 was input
  
 
+1. We adapted the bgcm equations of fennel in this modified file 
+https://github.com/DOI-USGS/COAWST/blob/main/ROMS/Nonlinear/Biology/estuarybgc.h
 
- 
+2. This is where we added the SAV biomass calculations 
+I would refer you to study the two pieces of code that are responsible for this model 
+https://github.com/DOI-USGS/COAWST/blob/main/ROMS/Nonlinear/Biology/sav_biomass.h
+
+3. As always, start with the distributed test case in COAWST which will help in understanding the model.
+
+1. Is it possible to set Epiphyte growth to zero?
+Response: You can set scl(epb) in inputs to 0. I think that should lead to epiphyte growth to zero
+
+-2 How was Dissolved Inorganic Nitrogen in the sediment (DINsed) calculated?
+
+Response: Dinsed gets passed as Dinsed_loc in sav_biomass.h
+Dinsed is based on below ground biomass respiration and mortality: 
+
+See this: 
+https://github.com/DOI-USGS/COAWST/blob/main/ROMS/Nonlinear/Biology/sav_biomass.h#L467
+
+-3. Does plant mortality put nutrients back to water column and soil?
+
+Response: When it comes to the water column, the equations alter the water column nutrient loading through SAV mortality. 
+The soil in theory gets impacted but we don't work with sediment chemistry in this model. In other words, sediment chemistry is currently not modified. Sediment properties through
+their physical characteristics only modify the SAV growth. 
+
